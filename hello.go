@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+
+	"github.com/chongxx/stringutil"
+)
 
 func main() {
-	fmt.Printf("Hello, world.\n")
+	fmt.Printf(stringutil.Reverse("Hello, world.\n"))
+	fmt.Printf("The time is ", time.Now())
 }
