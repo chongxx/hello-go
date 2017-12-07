@@ -27,4 +27,8 @@ func main() {
 	}
 
 	fmt.Println(sum)
+
+	// 如果把循环条件也省略掉，就是死循环了
+	//	for {
+	//	}
 }
