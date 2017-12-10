@@ -45,3 +45,5 @@ func (f MyFloat) Abs() float64 {
 func Mult2(v Vertex, i float64) float64 {
 	return v.X * v.Y * i
 }
+
+// ok 新的文件就这个样子
