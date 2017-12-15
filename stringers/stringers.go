@@ -17,6 +17,14 @@ func (p Person) String() string {
 	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
 }
 
+// 用于保存ip地址
+type IPAddr [4]byte
+
+// 返回格式化的字符串
+func (ip IPAddr) String() string {
+	return fmt.Sprintf("%v.%v.%v.%v", ip[0], ip[1], ip[2], ip[3])
+}
+
 func main() {
 	a := Person{
 		"Dash",
@@ -29,4 +37,13 @@ func main() {
 	}
 
 	fmt.Println(a, z)
+
+	addrs := map[string]IPAddr{
+		"loopback":  {127, 0, 0, 1},
+		"googleDNS": {8, 8, 8, 8},
+	}
+
+	for k, v := range addrs {
+		fmt.Printf("%v: %v\n", k, v)
+	}
 }
